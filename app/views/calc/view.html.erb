@@ -7,8 +7,8 @@
         <div class="input_form">
       <table class="output_table">
         <tr>
-          <th>Информация</th>
-          <th>Данные</th>
+          <th>Номер</th>
+          <th>Число</th>
         </tr>
         <% @inputed.each_with_index do |num,ind| %>
             <tr>
@@ -16,6 +16,10 @@
               <td><%=num%></td>
             </tr>
         <% end %>
+        <tr>
+          <th>Информация</th>
+          <th>Данные</th>
+        </tr>
         <tr>
           <td>Все последовательности</td> <td><%= @all %></td>
         </tr>
