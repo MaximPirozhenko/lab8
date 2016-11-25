@@ -1,11 +1,4 @@
 module CalcHelper
-  def check(a)
-    (0..Float::INFINITY).lazy.find do |s|
-      return nil if a.to_i < s
-      a.to_i == 5**s
-    end
-  end
-
   def processing(v)
     result = []
     substring = []
