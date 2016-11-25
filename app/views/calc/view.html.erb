@@ -1,0 +1,30 @@
+<% if @kolvo_posl == 0 %>
+    <script type="text/javascript">
+      alert( "Последовательностей не обнаружено" );
+      window.location.href="/calc/input"
+    </script>
+    <% else %>
+        <div class="input_form">
+      <table class="output_table">
+        <tr>
+          <th>Информация</th>
+          <th>Данные</th>
+        </tr>
+        <tr>
+          <td>Введенные числа</td> <td><%= @inputed %></td>
+        </tr>
+        <tr>
+          <td>Все последовательности</td> <td><%= @all %></td>
+        </tr>
+        <tr>
+          <td>Количество последовательностей</td> <td><%= @kolvo_posl %></td>
+        </tr>
+        <tr>
+          <td>Самая длинная последовательность</td> <td> <%=@max_posl %> </td>
+        </tr>
+      </table>
+          <%= link_to "Repeat", calc_input_path %>
+        </div>
+  <% end %>
+
+
