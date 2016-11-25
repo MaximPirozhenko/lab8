@@ -10,9 +10,12 @@
           <th>Информация</th>
           <th>Данные</th>
         </tr>
-        <tr>
-          <td>Введенные числа</td> <td><%= @inputed %></td>
-        </tr>
+        <% @inputed.each_with_index do |num,ind| %>
+            <tr>
+              <td><%=ind+1%></td>
+              <td><%=num%></td>
+            </tr>
+        <% end %>
         <tr>
           <td>Все последовательности</td> <td><%= @all %></td>
         </tr>
@@ -26,5 +29,3 @@
           <%= link_to "Repeat", calc_input_path %>
         </div>
   <% end %>
-
-
